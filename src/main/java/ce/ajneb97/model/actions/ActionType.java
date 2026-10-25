@@ -33,6 +33,8 @@ public enum ActionType {
     SET_ON_FIRE,
     FREEZE,
     HEAL,
+    ADD_TAG,
+    REMOVE_TAG,
     SET_FOOD_LEVEL,
     GIVE_ITEM,
     DROP_ITEM,

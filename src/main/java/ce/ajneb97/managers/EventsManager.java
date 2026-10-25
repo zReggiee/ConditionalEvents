@@ -292,6 +292,12 @@ public class EventsManager {
                                 if(firstArgNum < secondArgNum) approvedLine = true;break;
                             case LOWER_EQUALS:
                                 if(firstArgNum <= secondArgNum) approvedLine = true;break;
+                            case HAS_TAG:
+                                Player hasTagPlayer = Bukkit.getPlayerExact(firstArg);
+                                if(hasTagPlayer != null && hasTagPlayer.getScoreboardTags().contains(secondArg)) approvedLine = true;break;
+                            case NOT_HAS_TAG:
+                                Player notHasTagPlayer = Bukkit.getPlayerExact(firstArg);
+                                if(notHasTagPlayer == null || !notHasTagPlayer.getScoreboardTags().contains(secondArg)) approvedLine = true;break;
                         }
                     }
                     if(approvedLine){
@@ -425,6 +431,12 @@ public class EventsManager {
                                 if(firstArgNum < secondArgNum) approvedLine = true;break;
                             case LOWER_EQUALS:
                                 if(firstArgNum <= secondArgNum) approvedLine = true;break;
+                            case HAS_TAG:
+                                Player hasTagPlayer = Bukkit.getPlayerExact(firstArg);
+                                if(hasTagPlayer != null && hasTagPlayer.getScoreboardTags().contains(secondArg)) approvedLine = true;break;
+                            case NOT_HAS_TAG:
+                                Player notHasTagPlayer = Bukkit.getPlayerExact(firstArg);
+                                if(notHasTagPlayer == null || !notHasTagPlayer.getScoreboardTags().contains(secondArg)) approvedLine = true;break;
                         }
                     }
                     if(approvedLine){

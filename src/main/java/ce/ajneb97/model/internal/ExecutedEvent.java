@@ -428,6 +428,12 @@ public class ExecutedEvent {
             case HEAL:
                 ActionUtils.heal(livingEntity, actionLine);
                 return;
+            case ADD_TAG:
+                ActionUtils.addTag(livingEntity, actionLine);
+                return;
+            case REMOVE_TAG:
+                ActionUtils.removeTag(livingEntity, actionLine);
+                return;
             case THROW_DIRECTIONAL:
                 ActionUtils.throwDirectional(livingEntity, actionLine);
                 return;

@@ -18,7 +18,9 @@ public enum ConditionalType {
     GREATER(">"),
     GREATER_EQUALS(">="),
     LOWER("<"),
-    LOWER_EQUALS("<=");
+    LOWER_EQUALS("<="),
+    HAS_TAG("hasTag"),
+    NOT_HAS_TAG("!hasTag");
 
     private String text;
     ConditionalType(String text) {

@@ -911,6 +911,14 @@ public class ActionUtils {
         player.setFoodLevel(Integer.parseInt(actionLine));
     }
 
+    public static void addTag(LivingEntity livingEntity,String actionLine){
+        livingEntity.addScoreboardTag(actionLine);
+    }
+
+    public static void removeTag(LivingEntity livingEntity,String actionLine){
+        livingEntity.removeScoreboardTag(actionLine);
+    }
+
     public static void wait(String actionLine, ExecutedEvent executedEvent){
         executedEvent.setOnWait(true);
         int timeSeconds = Integer.parseInt(actionLine);
